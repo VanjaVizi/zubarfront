@@ -1,6 +1,6 @@
 import React from 'react'
-import { HeroSekcija } from '../components/HeroSekcija'
-import { OnamaSekcija } from '../components/OnamaSekcija'
+import { HeroSekcija } from '../components/HeroSekcija' 
+import { AboutUsSection } from '../components/AboutUsSection'
 
 export const Pocetna = () => {
   return (
@@ -15,11 +15,9 @@ export const Pocetna = () => {
             ></HeroSekcija>
          
         
-           <OnamaSekcija></OnamaSekcija>
+           <AboutUsSection></AboutUsSection>
 
-            <section className="about">
-
-            </section>
+ 
         </>
 
   
