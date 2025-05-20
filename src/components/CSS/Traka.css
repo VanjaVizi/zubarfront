@@ -1,0 +1,35 @@
+.scrolling-bar {
+  overflow: hidden;
+  background-color: var(--primary-color);
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.scrolling-track {
+  display: inline-flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+.scrolling-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0 2rem;
+}
+
+.tooth-icon {
+  font-size: 1.2rem;
+  color: white;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
