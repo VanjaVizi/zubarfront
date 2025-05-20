@@ -1,7 +1,10 @@
 import React from 'react'
 import './CSS/HeroSekcija.css';
+import { AppointmentForm } from './AppointmentForm';
+  
 export const HeroSekcija = ({naslov,opis,dugme1,dugme2,slika}) => {  ///CTA Call to action
   return (
+    <>
        <section className="hero">
                 <div className='hero-grid'>
                   <div className="hero-kolona1">
@@ -18,7 +21,10 @@ export const HeroSekcija = ({naslov,opis,dugme1,dugme2,slika}) => {  ///CTA Call
                 </div>
                 
                 </div> 
+            
         </section>
+        <AppointmentForm />
+        </>
    
   )
 }

@@ -1,73 +1,76 @@
-.hero{
-    background-image: url('../../../public/images/hero-pozadina.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 5% 10%;
-   
+.hero {
+  background-image: url('../../../public/images/hero-pozadina.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  padding: 5% 10%;
+  display: flex;
+  align-items: center;
 }
 
-.hero-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    height: 100vh;
- 
-
-}
-.hero-naslov{
-    font-size: 2.5rem; 
-}
-.hero-naslov span{
-    color: var(--primary-color);
-   
-    font-weight: bold;
-}
-.hero-kolona2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.hero-slika{
-    width:80%;
-    height: auto;
-    object-fit: cover;
-    margin: 0 auto;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.hero-dugme-link{
-   color: var(--secondary-color);
-   background-color: transparent;
-   text-decoration: underline;
+.hero-kolona1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
+.hero-naslov {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero-naslov span {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.hero-kolona2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-slika {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-dugme-link {
+  color: var(--secondary-color);
+  background-color: transparent;
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+/* Veći ekrani */
 @media (min-width: 768px) {
     .hero{
-         text-align: justify !important;
+        max-height: 100vh;
+        min-height: unset;
     }
-    .hero-naslov{
-        text-align: left !important;
-    }
-    .hero-grid{
-        grid-template-columns: 1fr 1fr; 
-    }
-    .hero-kolona1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: justify !important;
-    } 
-    .hero-slika{ 
-        height: auto;
-        object-fit: cover;
-    }
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-kolona1 {
+    align-items: flex-start;
+  }
+
+  .hero-slika {
+    max-width: 90%;
+    height: auto;
+  }
 }
-
-
-
-
-
-
