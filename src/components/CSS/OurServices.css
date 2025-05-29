@@ -1,0 +1,47 @@
+
+ .services-section {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f9f9fb;
+  
+
+}
+ 
+.explore-btn {
+  background-color:var(--primary-color);;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s;
+ 
+}
+
+.explore-btn:hover {
+  background-color: var(--primary-color);
+}
+
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+/* Desktop: 3 kartice u redu */
+@media screen and (min-width: 768px) {
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-card {
+    width: 300px;
+  }
+}

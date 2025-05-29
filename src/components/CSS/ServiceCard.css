@@ -1,0 +1,53 @@
+.service-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: 0.3s;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+.image-wrapper {
+  position: relative;
+}
+.icon-wrapper {
+  background-color: var(--primary-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: 0px;
+  border: 5px solid white;
+  position: absolute;
+  left: 1rem;
+  bottom: -25px; /* izlazi iz slike, ali ostaje unutar kartice */
+  z-index: 1;
+
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+ 
+ 

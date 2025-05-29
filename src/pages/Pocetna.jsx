@@ -2,6 +2,12 @@ import React from 'react'
 import { HeroSekcija } from '../components/HeroSekcija' 
 import { AboutUsSection } from '../components/AboutUsSection'
 import { Traka } from '../components/Traka'
+import OurServices from '../components/OurServices'
+import WhyChooseUsSection from '../components/WhyChooseUsSection'
+import CaseStoriesSection from '../components/CaseStoriesSection'
+import HowItWorksSection from '../components/HowItWorksSection'
+ 
+ 
 
 export const Pocetna = () => {
   return (
@@ -18,8 +24,17 @@ export const Pocetna = () => {
         
            <AboutUsSection></AboutUsSection>
             <Traka></Traka>
+
+          <OurServices></OurServices>
+         <Traka></Traka>
+         <WhyChooseUsSection></WhyChooseUsSection>
+          <CaseStoriesSection></CaseStoriesSection>
+          <HowItWorksSection></HowItWorksSection>
+     
+        <Traka></Traka>
+
+      
          
- 
         </>
 
   

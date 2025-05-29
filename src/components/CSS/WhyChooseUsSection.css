@@ -1,0 +1,143 @@
+.why-section {
+  background-color: white;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+ 
+
+.why-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .why-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.why-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.why-right {
+  flex: 1;
+  max-width: 500px;
+}
+
+
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+.stats >div{
+  flex: 1;
+  padding: 10px;
+}
+.stats > div:nth-child(2) {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.stats div h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.stats div p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.why-list li svg {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Video thumbnail i dekoracije */
+.video-thumbnail {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 280px;
+  height: 280px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba(0, 0, 255, 0.1), 0 0 0 20px rgba(0, 0, 255, 0.05);
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.overlay-circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.15), 0 0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  position: relative;
+}
+
+.triangle {
+  position: absolute;
+  left: 22px;
+  top: 16px;
+ 
+}
+
