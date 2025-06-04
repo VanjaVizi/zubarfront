@@ -1,0 +1,91 @@
+.newsletter-container {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: url('../../../public/images/hero-pozadina.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.newsletter-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.newsletter-title span {
+  color: var(--primary-color);
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+    padding: 0.5rem 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  max-width: 90%;
+}
+
+.email-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.newsletter-form button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #1430cc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}

@@ -6,6 +6,9 @@ import OurServices from '../components/OurServices'
 import WhyChooseUsSection from '../components/WhyChooseUsSection'
 import CaseStoriesSection from '../components/CaseStoriesSection'
 import HowItWorksSection from '../components/HowItWorksSection'
+import ZakazivanjeForma from '../components/ZakazivanjeForma'
+import FAQ from '../components/FAQ'
+import Newsletter from '../components/Newsletter'
  
  
 
@@ -26,14 +29,19 @@ export const Pocetna = () => {
             <Traka></Traka>
 
           <OurServices></OurServices>
-         <Traka></Traka>
+           <Traka></Traka>
          <WhyChooseUsSection></WhyChooseUsSection>
           <CaseStoriesSection></CaseStoriesSection>
           <HowItWorksSection></HowItWorksSection>
-     
-        <Traka></Traka>
 
+          <Traka></Traka>
+
+
+
+          <ZakazivanjeForma></ZakazivanjeForma>
+          <FAQ></FAQ>
       
+          <Newsletter></Newsletter>
          
         </>
 
