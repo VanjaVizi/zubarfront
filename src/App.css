@@ -42,3 +42,6 @@ h1, h2, h3, h4, h5, h6{
 .title span {
   color: var(--primary-color);;
 }
+.naslovBeli{
+    color: white;
+}

@@ -20,9 +20,9 @@ export const AboutUsSection = () => {
           </p>
 
           <ul className="about-list">
-            <li><FaCheckCircle className="icon" /> Premium Dental Services You Can Trust</li>
-            <li><FaCheckCircle className="icon" /> Award-Winning Experts in Dental Care</li>
-            <li><FaCheckCircle className="icon" /> Dedicated Experts Behind Every Smile</li>
+            <li><FaCheckCircle className="icon-about" /> Premium Dental Services You Can Trust</li>
+            <li><FaCheckCircle className="icon-about" /> Award-Winning Experts in Dental Care</li>
+            <li><FaCheckCircle className="icon-about" /> Dedicated Experts Behind Every Smile</li>
           </ul>
 
           <button>Learn More</button>
