@@ -1,0 +1,44 @@
+.award-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+     max-width: 800px;
+  margin: 0 auto;
+}
+
+.award-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.award-image img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.award-content .award-year {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.award-title {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.award-description {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}

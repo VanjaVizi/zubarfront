@@ -9,7 +9,13 @@ import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ZubarSection from '../components/ZubarSection';
+import useZubari from '../components/hooks/useZubari';
+import AwardSection from '../components/AwardSection';
+import FAQ from '../components/FAQ';
+import ZakazivanjeForma from '../components/ZakazivanjeForma';
+import Newsletter from '../components/Newsletter';
 const AboutUs = () => {
+  const zubari = useZubari();
   return (
     <>
           <HeroOstaleStranice naslov={"About Us"}/> 
@@ -48,7 +54,11 @@ const AboutUs = () => {
 
          <WhyChooseUsSection/>
 
-         <ZubarSection></ZubarSection>
+         <ZubarSection zubari={zubari.slice(0, 3)} />
+         <AwardSection/>
+         <FAQ boja={"tegetSekcija"}></FAQ>
+         <ZakazivanjeForma></ZakazivanjeForma>
+         <Newsletter></Newsletter>
 
 
     

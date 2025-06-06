@@ -45,3 +45,16 @@ h1, h2, h3, h4, h5, h6{
 .naslovBeli{
     color: white;
 }
+
+.tegetSekcija{
+  background-color: var(--secondary-color)  !important;
+  max-width: 100vw !important;
+    padding: 5% 10% !important;
+
+}
+.tegetSekcija p{
+    color: white; 
+}
+.tegetSekcija .title{
+    color: white; 
+}

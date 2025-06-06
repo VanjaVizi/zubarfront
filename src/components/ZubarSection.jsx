@@ -3,40 +3,8 @@ import './CSS/ZubarSection.css';
 import ZubarCard from './ZubarCard';
  
 
-const zubari = [
-  {
-    ime: "Dr. Olivia Hayes",
-    titula: "Cosmetic Dentist",
-    slika: '/images/zubar1.png',
-    facebook: "https://facebook.com/oliviahayes",
-    pinterest: "https://pinterest.com/oliviahayes",
-    instagram: "https://instagram.com/oliviahayes",
-    linkedin: "https://linkedin.com/in/oliviahayes",
-    tiktok: "https://tiktok.com/@oliviahayes"
-  },
-  {
-    ime: "Dr. Emily Carter",
-    titula: "General Dentist",
-    slika: '/images/zubar1.png',
-    facebook: "https://facebook.com/emilycarter",
-    pinterest: "https://pinterest.com/emilycarter",
-    instagram: "https://instagram.com/emilycarter",
-    linkedin: "https://linkedin.com/in/emilycarter",
-    tiktok: "https://tiktok.com/@emilycarter"
-  },
-  {
-    ime: "Dr. James Walker",
-    titula: "Orthodontist",
-    slika: '/images/zubar1.png',
-    facebook: "https://facebook.com/jameswalker",
-    pinterest: "https://pinterest.com/jameswalker",
-    instagram: "https://instagram.com/jameswalker",
-    linkedin: "https://linkedin.com/in/jameswalker",
-    tiktok: "https://tiktok.com/@jameswalker"
-  }
-];
 
-const ZubarSection = () => {
+const ZubarSection = ({zubari}) => {
   return (
     <section className="zubar-sekcija">
       <p className="podnaslov">OUR TEAM</p>

@@ -29,7 +29,7 @@ const faqData = [
   },
 ];
 
-const FAQ = () => {
+const FAQ = ({boja}) => {
   const [activeIndex, setActiveIndex] = useState(1); // 1 otvoreno po defaultu
 
   const toggleAnswer = (index) => {
@@ -37,7 +37,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-container">
+   <section className={`faq-container ${boja ? boja : ''}`}>
       <div className="faq-left">
         <p className="podnaslov">FAQS</p>
         <h2 className="title">
