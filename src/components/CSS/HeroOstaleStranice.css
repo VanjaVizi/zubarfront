@@ -6,7 +6,35 @@
         background-repeat: no-repeat;
         padding: 5% 10%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         justify-content: center;
+} 
+
+.hero-ostale-stranice .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumbs {
+  color: var(--text-color);
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.breadcrumbs a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  margin-right: 0.3rem;
 }
