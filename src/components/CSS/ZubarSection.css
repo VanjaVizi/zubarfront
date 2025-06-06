@@ -1,0 +1,84 @@
+.zubar-sekcija {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.zubar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.zubar-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.zubar-card:hover {
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.zubar-slika {
+  position: relative;
+  overflow: hidden;
+}
+
+.zubar-slika img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.zubar-slika:hover .social-icons {
+  opacity: 1;
+}
+
+.social-icons svg {
+  background-color: white;
+  color: var(--secondary-color);
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.social-icons svg:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.zubar-info {
+  padding: 1rem;
+}
+
+.zubar-info h3 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.zubar-info p {
+  margin-top: 0.3rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
