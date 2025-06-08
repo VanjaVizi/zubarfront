@@ -1,54 +1,38 @@
   import { ErrorMessage, Field, Formik,Form } from 'formik';
 import React, { useState } from 'react'
  import '../components/CSS/RegisterPage.css';  
+import * as Yup from 'yup';
 
-  function RegisterPage() {
+
+const RegisterSchema = Yup.object().shape({
+  ime: Yup.string()
+    .required('Ime je obavezno'),
+  prezime: Yup.string()
+    .required('Prezime je obavezno'),
+  email: Yup.string()
+    .email('Email nije ispravan')
+    .required('Email je obavezan'),
+  lozinka: Yup.string()
+    .min(6, 'Lozinka mora imati bar 6 karaktera')
+    .required('Lozinka je obavezna'),
+  potvrdaLozinke: Yup.string()
+    .oneOf([Yup.ref('lozinka')], 'Lozinke se ne poklapaju')
+    .required('Potvrda lozinke je obavezna'),
+  pol: Yup.string()
+    .required('Pol je obavezan'),  // za radio, vrednost će biti string "Muški" ili "Ženski"
+  datumRodjenja: Yup.string()
+    .required('Datum rođenja je obavezan'),
+  brojTelefona: Yup.string()
+    .required('Broj telefona je obavezan')
+});
+
+
+
+function RegisterPage() {
         const initialRegisterValues = {
             ime: '', prezime: '', email: '', lozinka: '', potvrdaLozinke: '',
             pol: '', datumRodjenja: '', brojTelefona: ''
-        };
-
-        const validateRegister = (values) => {
-            const errors = {};
-            // Ime i prezime - obavezna polja
-            if (!values.ime.trim()) {
-                errors.ime = 'Ime je obavezno.';
-            }
-            if (!values.prezime.trim()) {
-                errors.prezime = 'Prezime je obavezno.';
-            }
-            // Email - obavezan i format
-            if (!values.email) {
-                errors.email = 'Email je obavezan.';
-            } else if (!values.email.includes('@')) {
-                errors.email = 'Email nije ispravan.';
-            }
-            // Lozinka - obavezna i minimalna dužina
-            if (!values.lozinka) {
-                errors.lozinka = 'Lozinka je obavezna.';
-            } else if (values.lozinka.length < 6) {
-                errors.lozinka = 'Lozinka mora imati bar 6 karaktera.';
-            }
-            // Potvrda lozinke - obavezna i mora se poklapati sa lozinkom
-            if (!values.potvrdaLozinke) {
-                errors.potvrdaLozinke = 'Potvrda lozinke je obavezna.';
-            } else if (values.potvrdaLozinke !== values.lozinka) {
-                errors.potvrdaLozinke = 'Lozinke se ne poklapaju.';
-            }
-            // Pol - obavezno (mora biti izabrano jedno od radio dugmadi)
-            if (!values.pol) {
-                errors.pol = 'Izaberite pol.';
-            }
-            // Datum rođenja - obavezan
-            if (!values.datumRodjenja) {
-                errors.datumRodjenja = 'Datum rođenja je obavezan.';
-            }
-            // Broj telefona - obavezan i mora sadržati samo cifre
-            if (!values.brojTelefona) {
-                errors.brojTelefona = 'Broj telefona je obavezan.';
-            }
-            return errors;
-        };
+        }; 
 
     const handleRegisterSubmit = (values) => {
         console.log('Podaci za registraciju:', values);
@@ -59,7 +43,7 @@ import React, { useState } from 'react'
      <div className="registerform-container">
       <Formik
         initialValues={initialRegisterValues}
-        validate={validateRegister}
+        validationSchema={RegisterSchema}
         onSubmit={handleRegisterSubmit}
       >
         <Form className="registerform-form">
