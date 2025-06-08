@@ -7,6 +7,7 @@ import Navbar from './components/navigacija/Navbar';
 import AboutUs from './pages/AboutUs';
 import Dentists from './pages/Dentists';
 import NotFound from './pages/NotFound';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         
           <Route path="/about" element={<AboutUs />} />
            <Route path="/dentists" element={<Dentists />} />
+           <Route path="/register" element={<RegisterPage />} />
+
 
 
           
