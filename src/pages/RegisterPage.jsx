@@ -29,6 +29,7 @@ const RegisterSchema = Yup.object().shape({
 
 
 function RegisterPage() {
+    const [korak, setKorak] = useState(1); 
         const initialRegisterValues = {
             ime: '', prezime: '', email: '', lozinka: '', potvrdaLozinke: '',
             pol: '', datumRodjenja: '', brojTelefona: ''
@@ -48,59 +49,75 @@ function RegisterPage() {
       >
         <Form className="registerform-form">
           <h2 className="registerform-title">Registruj se</h2>
+            {korak === 1 && (
+                <>
 
-          <div className="registerform-field">
-            <label htmlFor="ime">Ime</label>
-            <Field id="ime" name="ime" type="text" />
-            <ErrorMessage name="ime" component="div" className="registerform-error" />
-          </div>
 
-          <div className="registerform-field">
-            <label htmlFor="prezime">Prezime</label>
-            <Field id="prezime" name="prezime" type="text" />
-            <ErrorMessage name="prezime" component="div" className="registerform-error" />
-          </div>
+                        <div className="registerform-field">
+                            <label htmlFor="ime">Ime</label>
+                            <Field id="ime" name="ime" type="text" />
+                            <ErrorMessage name="ime" component="div" className="registerform-error" />
+                        </div>
 
-          <div className="registerform-field">
-            <label htmlFor="email">Email</label>
-            <Field id="email" name="email" type="email" />
-            <ErrorMessage name="email" component="div" className="registerform-error" />
-          </div>
+                        <div className="registerform-field">
+                            <label htmlFor="prezime">Prezime</label>
+                            <Field id="prezime" name="prezime" type="text" />
+                            <ErrorMessage name="prezime" component="div" className="registerform-error" />
+                        </div>
 
-          <div className="registerform-field">
-            <label htmlFor="lozinka">Lozinka</label>
-            <Field id="lozinka" name="lozinka" type="password" />
-            <ErrorMessage name="lozinka" component="div" className="registerform-error" />
-          </div>
+                        <div className="registerform-field">
+                            <label htmlFor="email">Email</label>
+                            <Field id="email" name="email" type="email" />
+                            <ErrorMessage name="email" component="div" className="registerform-error" />
+                        </div>
 
-          <div className="registerform-field">
-            <label htmlFor="potvrdaLozinke">Potvrda lozinke</label>
-            <Field id="potvrdaLozinke" name="potvrdaLozinke" type="password" />
-            <ErrorMessage name="potvrdaLozinke" component="div" className="registerform-error" />
-          </div>
+                        <div className="registerform-field">
+                            <label htmlFor="lozinka">Lozinka</label>
+                            <Field id="lozinka" name="lozinka" type="password" />
+                            <ErrorMessage name="lozinka" component="div" className="registerform-error" />
+                        </div>
 
-          <div className="registerform-field">
-            <label>Pol</label>
-            <div className="registerform-radio-group">
-              <label><Field type="radio" name="pol" value="Muški" /> Muški</label>
-              <label><Field type="radio" name="pol" value="Ženski" /> Ženski</label>
-            </div>
-            <ErrorMessage name="pol" component="div" className="registerform-error" />
-          </div>
+                        <div className="registerform-field">
+                            <label htmlFor="potvrdaLozinke">Potvrda lozinke</label>
+                            <Field id="potvrdaLozinke" name="potvrdaLozinke" type="password" />
+                            <ErrorMessage name="potvrdaLozinke" component="div" className="registerform-error" />
+                        </div>
 
-          <div className="registerform-field">
-            <label htmlFor="datumRodjenja">Datum rođenja</label>
-            <Field id="datumRodjenja" name="datumRodjenja" type="date" />
-            <ErrorMessage name="datumRodjenja" component="div" className="registerform-error" />
-          </div>
+                <button type="button" className="registerform-button" onClick={() => setKorak(2)}>
+                                Sledeći korak
+                                </button>
 
-          <div className="registerform-field">
-            <label htmlFor="brojTelefona">Broj telefona</label>
-            <Field id="brojTelefona" name="brojTelefona" type="tel" />
-            <ErrorMessage name="brojTelefona" component="div" className="registerform-error" />
-          </div>
+           </> )}
 
-          <button type="submit" className="registerform-button">Registruj se</button>
+
+
+
+            {korak === 2 && (   
+                <>
+                <div className="registerform-field">
+                    <label>Pol</label>
+                    <div className="registerform-radio-group">
+                    <label><Field type="radio" name="pol" value="Muški" /> Muški</label>
+                    <label><Field type="radio" name="pol" value="Ženski" /> Ženski</label>
+                    </div>
+                    <ErrorMessage name="pol" component="div" className="registerform-error" />
+                </div>
+
+                <div className="registerform-field">
+                    <label htmlFor="datumRodjenja">Datum rođenja</label>
+                    <Field id="datumRodjenja" name="datumRodjenja" type="date" />
+                    <ErrorMessage name="datumRodjenja" component="div" className="registerform-error" />
+                </div>
+
+                    <div className="registerform-field">
+                        <label htmlFor="brojTelefona">Broj telefona</label>
+                        <Field id="brojTelefona" name="brojTelefona" type="tel" />
+                        <ErrorMessage name="brojTelefona" component="div" className="registerform-error" />
+                    </div>
+
+                     <button type="submit" className="registerform-button">Registruj se</button>
+
+                     </>)}
         </Form>
       </Formik>
     </div>
